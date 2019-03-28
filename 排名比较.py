@@ -6,7 +6,7 @@ while True:
     country = input('输入查询国家：')
     if country in country_list:
         print('===========================')
-        db = pymysql.connect("localhost","root","440102","product_rank" )
+        db = pymysql.connect("localhost","root","*****","product_rank" )
         cursor = db.cursor()
         sql = "SELECT DISTINCT query_time FROM PRODUCT_RANK_RECORD WHERE country = '%s'"%(country)
         cursor.execute(sql)
